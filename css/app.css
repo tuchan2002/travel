@@ -92,7 +92,7 @@ ul {
   opacity: 0;
   z-index: 1;
   visibility: hidden;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease-in-out;
   transform: translateY(4px);
 }
 .dropdown-item, .dropdown-select {
@@ -176,6 +176,7 @@ body {
   color: #202336;
 }
 .header-menu-toggle {
+  color: #202336;
   font-size: 26px;
   margin-left: 20px;
   cursor: pointer;
@@ -210,6 +211,7 @@ body {
   .header-menu-link {
     display: block;
     padding: 16px;
+    color: #202336;
     border-radius: 8px;
   }
   .header-menu-link:hover {
@@ -223,7 +225,7 @@ body {
   }
   .header-auth-item {
     font-size: 14px;
-    height: 36px;
+    height: 38px;
     padding: 0 20px;
   }
 }
@@ -465,7 +467,7 @@ body {
 }
 .testimonial-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   gap: 0 28px;
 }
