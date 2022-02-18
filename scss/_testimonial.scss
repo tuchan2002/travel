@@ -1,12 +1,13 @@
 .testimonial {
-    margin-bottom: 240px;
+    margin-bottom: 120px;
     &-heading {
-        margin-bottom: 60px;
+        margin-bottom: 24px;
     }
     &-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 0 28px;
     }
     &-content {
         max-width: 420px;
@@ -32,5 +33,24 @@
     }
     &-job {
         font-size: 14px;
+    }
+    @media screen and (max-width: 1023px)  {
+        margin-bottom: 72px;
+    }
+    @media screen and (max-width: 767px)  {
+        &-container {
+            flex-direction: column;
+            gap: 30px 0;
+        }
+        &-rating {
+            justify-content: center;
+        }
+        &-content {
+            text-align: center;
+        }
+        &-heading {
+            text-align: center;
+            margin-bottom: 32px;
+        }
     }
 }

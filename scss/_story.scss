@@ -61,4 +61,25 @@
         display: flex;
         flex-direction: column;
     }
+    @media screen and (max-width: 1023px)  {
+        margin-bottom: 72px;
+        &-list {
+            grid-auto-columns: 280px;
+            grid-auto-flow: column;
+            overflow: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-snap-stop: always;
+            touch-action: manipulation;
+            -webkit-overflow-scrolling: touch;
+            grid-template-columns: unset;
+        }
+        &-list::-webkit-scrollbar {
+            display: none;
+            width: 0;
+        }
+        &-item {
+            scroll-snap-align: start;
+        }
+    }
 }

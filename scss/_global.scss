@@ -21,7 +21,8 @@ ul {
     line-height: 1;
     height: 52px;
     padding: 0 60px;
-    border-radius: 10px;
+    margin-left: 4px;
+    border-radius: 30px;
     background-color: transparent;
     outline: none;
     &--primary {
@@ -36,10 +37,24 @@ ul {
 
 .dropdown {
     width: 100%;
+    position: relative;
     &-list {
-        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        opacity: 0;
+        z-index: 1;
+        visibility: hidden;
+        transition: all 0.2s ease-in-out;
+        transform: translateY(4px);
     }
 
+    &-item,
     &-select {
         display: flex;
         justify-content: space-between;
@@ -47,5 +62,16 @@ ul {
         padding: 20px 30px;
         border-radius: 8px;
         border: 1px solid $gray-dark;
+        cursor: pointer;
+    }
+    &-item {
+        border: none;
+        &:hover {
+            background-color: $gray-lighter;
+        }
+    }
+    &:hover .dropdown-list {
+        opacity: 1;
+        visibility: visible;
     }
 }

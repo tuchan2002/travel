@@ -1,10 +1,16 @@
 .header {
     padding-top: 44px;
-    padding-bottom: 72px;
+    padding-bottom: 60px;
+    &-logo {
+        margin-right: 160px;
+    }
     &-main {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+    }
+    &-auth {
+        margin-left: auto;
     }
     &-menu {
         display: flex;
@@ -12,6 +18,60 @@
         gap: 40px;
         &-link {
             color: $gray;
+            transition: color 0.3s ease-in-out;
+            &:hover {
+                color: $gray-darkest;
+            }
+        }
+    }
+    &-menu-toggle {
+        font-size: 26px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    @media screen and (min-width: 1024px) {
+        &-menu-toggle {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        &-logo {
+            margin-right: 0;
+        }
+        &-menu {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 75%;
+            max-width: 320px;
+            background-color: #fff;
+            display: block;
+            border-left: 1px solid #eee;
+            padding: 52px 20px;
+            z-index: 100;
+            transition: transform 0.3s linear;
+            transform: translateX(100%);
+        }
+        &-menu.active {
+            transform: translateX(0);
+        }
+        &-menu-link {
+            display: block;
+            padding: 16px;
+            border-radius: 8px;
+            &:hover {
+                background-color: $primary-color;
+                color: #fff;
+            }
+        }
+    }
+    @media screen and (max-width: 767px)  {
+        padding: 28px 0;
+        &-auth-item {
+            font-size: 14px;
+            height: 36px;
+            padding: 0 20px;
         }
     }
 }

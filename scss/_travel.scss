@@ -1,5 +1,5 @@
 .travel {
-    padding-bottom: 240px;
+    padding-bottom: 120px;
     &-main {
         display: flex;
         justify-content: space-between;
@@ -10,6 +10,9 @@
         font-size: 64px;
         line-height: 1.25;
         margin-bottom: 72px;
+    }
+    &-content {
+        width: 100%;
     }
     &-caption {
         font-size: 20px;
@@ -27,13 +30,36 @@
             background-color: $gray-darkest;
         }
     }
-    &-content {
-        max-width: 450px;
-    }
     &-form {
         margin-bottom: 48px;
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-gap: 28px;
+    }
+    @media screen and (min-width: 1024px) {
+        &-content {
+            max-width: 450px;
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        padding-bottom: 72px;
+        &-main {
+            flex-direction: column;
+            gap: 40px 0;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &-heading {
+            font-size: 44px;
+            margin-bottom: 20px;
+        }
+        &-caption {
+            margin-bottom: 24px;
+        }
+        &-form {
+            grid-template-columns: repeat(1,1fr);
+            grid-gap: 20px;
+            margin-bottom: 32px;
+        }
     }
 }

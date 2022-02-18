@@ -20,3 +20,14 @@ body {
     font-size: 17px;
     color: $gray-darker;
 }
+
+@media screen and (max-width: 767px) {
+    .heading {
+        font-family: $secondary-font;
+        color: $gray-darkest;
+        &--small {
+            line-height: 1.4;
+            font-size: 30px;
+        }
+    }
+}

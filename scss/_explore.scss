@@ -1,5 +1,5 @@
 .explore {
-    padding-bottom: 240px;
+    padding-bottom: 120px;
     &-main {
         display: flex;
         justify-content: space-between;
@@ -7,14 +7,31 @@
         color: $gray-darkest;
         gap: 48px;
     }
-    &-content {
-        max-width: 470px;
-        padding-right: 60px;
-    }
     &-desc {
         margin-bottom: 32px;
     }
     &-heading {
         margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1024px) {
+        &-content {
+            max-width: 470px;
+            padding-right: 60px;
+        }
+    }
+    @media screen and (max-width: 1023px) {
+        padding-bottom: 72px;  
+        &-main {
+            flex-direction: column-reverse;
+            gap: 40px 0;
+        }
+        &-content {
+            text-align: center;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &-desc {
+            font-size: 15px;
+        }
     }
 }

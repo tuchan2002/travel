@@ -1,5 +1,5 @@
 .guide {
-    margin-bottom: 200px;
+    margin-bottom: 120px;
     &-main {
         display: flex;
         justify-content: space-between;
@@ -7,8 +7,7 @@
         gap: 80px;
     }
     &-content {
-        max-width: 450px;
-        padding-left: 50px;
+        width: 100%;
     }
     &-heading {
         margin-bottom: 20px;
@@ -16,7 +15,28 @@
     &-desc {
         margin-bottom: 32px;
     }
-    &-image {
-        padding-right: 40px;
+    @media screen and (min-width: 1024px)  {
+        &-content {
+            max-width: 450px;
+            padding-left: 50px;
+        }
+        &-image {
+            padding-right: 40px;
+        }
+    }
+    @media screen and (max-width: 1023px)  {
+        margin-bottom: 72px;
+        &-main {
+            flex-direction: column;
+            gap: 40px 0;
+        }
+        &-content {
+            text-align: center;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &-desc {
+            font-size: 15px;
+        }
     }
 }
