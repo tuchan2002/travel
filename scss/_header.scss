@@ -1,0 +1,17 @@
+.header {
+    padding-top: 44px;
+    padding-bottom: 72px;
+    &-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-menu {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        &-link {
+            color: $gray;
+        }
+    }
+}

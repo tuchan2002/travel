@@ -1,0 +1,64 @@
+.story {
+    margin-bottom: 240px;
+    &-header {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 56px;
+    }
+    &-more {
+        color: $primary-color;
+        display: flex;
+        align-items: center;
+        gap: 0 6px;
+    }
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 25px;
+
+    }
+    &-image {
+        height: 230px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px 8px 0 0;
+            object-position: top;
+        }
+    }
+    &-title {
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 10px 0;
+        color: $gray-darkest;
+    }
+    &-desc {
+        margin-bottom: 20px;
+        line-height: 1.7;
+        font-size: 14px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+    }
+    &-readmore {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        color: $primary-color;
+        margin-top: auto;
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+    }
+    &-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+}

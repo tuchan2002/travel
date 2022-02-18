@@ -1,0 +1,51 @@
+.wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    display: 15px;
+    font-weight: 500;
+    line-height: 1;
+    height: 52px;
+    padding: 0 60px;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: none;
+    &--primary {
+        color: #fff;
+        background-color: $primary-color;
+    }
+    &--secondary {
+        color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+}
+
+.dropdown {
+    width: 100%;
+    &-list {
+        display: none;
+    }
+
+    &-select {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        border-radius: 8px;
+        border: 1px solid $gray-dark;
+    }
+}

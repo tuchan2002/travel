@@ -1,0 +1,20 @@
+.explore {
+    padding-bottom: 240px;
+    &-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $gray-darkest;
+        gap: 48px;
+    }
+    &-content {
+        max-width: 470px;
+        padding-right: 60px;
+    }
+    &-desc {
+        margin-bottom: 32px;
+    }
+    &-heading {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,39 @@
+.travel {
+    padding-bottom: 240px;
+    &-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $gray-darkest;
+    }
+    &-heading {
+        font-size: 64px;
+        line-height: 1.25;
+        margin-bottom: 72px;
+    }
+    &-caption {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 48px;
+        position: relative;
+        padding-bottom: 20px;
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 32px;
+            height: 2px;
+            background-color: $gray-darkest;
+        }
+    }
+    &-content {
+        max-width: 450px;
+    }
+    &-form {
+        margin-bottom: 48px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 28px;
+    }
+}

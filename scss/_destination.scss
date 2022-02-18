@@ -1,0 +1,48 @@
+.destination {
+    margin-bottom: 200px;
+    &-header {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 56px;
+    }
+    &-more {
+        color: $primary-color;
+        display: flex;
+        align-items: center;
+        gap: 0 6px;
+    }
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 24px;
+    }
+    &-item {
+        height: 365px;
+        position: relative;
+    }
+    &-image img {
+        border-radius: 8px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        border-top-right-radius: 8px;
+        padding: 12px 32px 0 0;
+        background-color: #fff;
+    }
+    &-name {
+        font-size: 16px;
+        font-weight: 600;
+        color: $gray-darkest;
+        margin-bottom: 8px;
+    }
+    &-country {
+        font-size: 14px;
+    }
+}

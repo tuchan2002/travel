@@ -1,0 +1,45 @@
+.footer {
+    background-color: $gray-lighter;
+    padding-top: 64px;
+    font-family: $third-font;
+    &-main {
+        display: grid;
+        grid-template-columns: 2.5fr repeat(3,1fr);
+        grid-gap: 0 80px;
+        padding-bottom: 64px;
+        border-bottom: 1px solid #c4c4c4;
+    }
+    &-bottom {
+        padding: 28px 0;
+    }
+    &-social {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        &-link {
+            font-size: 18px;
+            color: $gray-darkest;
+        }
+    }
+    &-logo {
+        margin-bottom: 24px;
+    }
+    &-desc {
+        margin-bottom: 40px;
+        font-size: 14px;
+        max-width: 280px;
+    }
+    &-copy-right {
+        font-size: 14px;
+    }
+    &-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: $gray-darkest;
+    }
+    &-link {
+        display: inline-block;
+        color: $gray-dark;
+    }
+}

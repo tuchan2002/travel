@@ -1,0 +1,22 @@
+.guide {
+    margin-bottom: 200px;
+    &-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 80px;
+    }
+    &-content {
+        max-width: 450px;
+        padding-left: 50px;
+    }
+    &-heading {
+        margin-bottom: 20px;
+    }
+    &-desc {
+        margin-bottom: 32px;
+    }
+    &-image {
+        padding-right: 40px;
+    }
+}
