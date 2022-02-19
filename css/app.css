@@ -465,14 +465,24 @@ body {
 .testimonial-heading {
   margin-bottom: 24px;
 }
-.testimonial-container {
+.testimonial-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.testimonial-list {
   display: flex;
-  justify-content: space-around;
+  position: relative;
+  transition: transform 0.3s linear;
+}
+.testimonial-item {
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0 28px;
+  gap: 0 32px;
 }
 .testimonial-content {
-  max-width: 420px;
+  max-width: 450px;
 }
 .testimonial-rating {
   font-size: 20px;
@@ -485,7 +495,8 @@ body {
 .testimonial-desc {
   color: #202336;
   margin-bottom: 40px;
-  line-height: 1.4;
+  line-height: 1.5;
+  font-size: 20px;
 }
 .testimonial-name {
   font-size: 16px;
@@ -496,18 +507,47 @@ body {
 .testimonial-job {
   font-size: 14px;
 }
+.testimonial-arrow-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #000;
+  border: 2px solid #000;
+  font-size: 20px;
+}
+@media screen and (min-width: 767px) {
+  .testimonial-arrow {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    border-radius: 16px 0 0 0;
+    display: flex;
+    padding: 6px 8px 0 12px;
+    gap: 12px;
+    z-index: 10;
+  }
+}
 @media screen and (max-width: 1023px) {
   .testimonial {
     margin-bottom: 72px;
   }
+  .testimonial-desc {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 767px) {
-  .testimonial-container {
-    flex-direction: column;
+  .testimonial-item {
+    flex-direction: column-reverse;
     gap: 30px 0;
   }
   .testimonial-rating {
     justify-content: center;
+    margin-bottom: 16px;
   }
   .testimonial-content {
     text-align: center;
@@ -515,6 +555,22 @@ body {
   .testimonial-heading {
     text-align: center;
     margin-bottom: 32px;
+  }
+  .testimonial-desc {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .testimonial-arrow {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 0 0 16px 16px;
+    display: flex;
+    padding: 0 8px 4px 8px;
+    gap: 12px;
+    z-index: 10;
   }
 }
 
